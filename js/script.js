@@ -10,13 +10,10 @@ function handleCheck(event) {
   let inBetween = false;
   if (event.shiftKey && this.checked)
     checkboxes.forEach(checkbox => {
-      if (checkbox === this || checkbox === lastChecked) {
+      if (checkbox === this || checkbox === lastChecked)
         inBetween = !inBetween;
-        console.log('Starting to check them in b/w');
-      }
       if (inBetween)
         checkbox.checked = true;
-      console.log(checkbox);
     });
   lastChecked = this;
 }
